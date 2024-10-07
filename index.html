@@ -1,2 +1,208 @@
-<h1>Hello world!</h1>
-<p>zyron Tech.</p>
+<html>
+  <head>
+    <style>
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    background-color: #4A007A; /* Purple tone */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Main Message Section */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+section p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #555;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input[type="email"] {
+    padding: 12px;
+    width: 300px;
+    max-width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: #4A007A;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #6200ea;
+}
+
+/* Progress Bar Section */
+section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+section div {
+    background-color: #ddd;
+    height: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section div div {
+    background-color: #4A007A;
+    height: 100%;
+    width: 70%; /* Adjust this percentage for the progress */
+}
+
+/* Countdown Timer */
+#countdown-timer {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section h3 {
+        font-size: 20px;
+    }
+
+    form input[type="email"] {
+        width: 100%;
+    }
+
+    #countdown-timer {
+        font-size: 24px;
+    }
+}
+  </style>
+  </head>
+  <header style="text-align: center; padding: 20px;">
+  <img src="logo.png" alt="Lux-Earn Logo" width="100">
+  <h1>Omobaadebanjo Foundation</h1>
+  <p>Building a better experience for you. Stay tuned!</p>
+</header>
+<section style="text-align: center; padding: 50px; background-color: #f3f3f3;">
+  <h2>We’re working hard on something amazing!</h2>
+  <p>Our site is currently under construction. We’ll be ready to launch in:</p>
+  <div id="countdown-timer"></div> <!-- Countdown timer will go here -->
+  <form>
+    <input type="email" placeholder="Enter your email for updates" style="padding: 10px; width: 250px;">
+    <button type="submit" style="padding: 10px 20px; background-color: purple; color: white;">Notify Me</button>
+  </form>
+</section>
+<section style="text-align: center; padding: 50px;">
+  <h3>Progress: 50% Complete</h3>
+  <div style="background-color: #ddd; height: 20px; width: 80%; margin: 0 auto;">
+    <div style="background-color: purple; height: 100%; width: 70%;"></div>
+  </div>
+</section>
+<footer style="text-align: center; padding: 20px; background-color: #333; color: white;">
+  <p>Connect with us on social media!</p>
+  <a href="#" style="color: white; margin: 0 10px;">Facebook</a>
+  <a href="#" style="color: white; margin: 0 10px;">Twitter</a>
+  <a href="#" style="color: white; margin: 0 10px;">Instagram</a>
+  <p>&copy; 2024 omobaadebanjofoundation. All rights reserved.</p>
+</footer>
+<script>
+  var countDownDate = new Date("Oct 13, 2024 00:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " +
+    minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown-timer").innerHTML = "We have launched!";
+    }
+  }, 1000);
+</script>
+
+</html>
