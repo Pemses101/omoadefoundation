@@ -168,19 +168,19 @@ input::placeholder {
   </div>
 </section>
 <script>
-// Set the countdown to 5 days from now
-var countDownDate = new Date("Oct 13, 2024 00:00:00").getTime();
+// Set the countdown date 5 days from now
+var countDownDate = new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
 
-  // Get current time
+  // Get the current date and time
   var now = new Date().getTime();
 
-  // Find the distance between now and the countdown date
+  // Find the time difference between now and the countdown date
   var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes, and seconds
+  // Calculate the time left in days, hours, minutes, and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -190,13 +190,13 @@ var x = setInterval(function() {
   document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " +
   minutes + "m " + seconds + "s ";
 
-  // If the countdown is over, display some message
+  // If the countdown is over, show a message
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdown-timer").innerHTML = "We have launched!";
   }
-}, 1000);
-</script>
+}, 1000); // 1000ms = 1 second
+  </script>
 
 
 </body>
