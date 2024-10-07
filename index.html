@@ -167,43 +167,37 @@ input::placeholder {
     <p><b>Dev: west.kenterprise</b></p>
   </div>
 </section>
+<script>
+// Set the countdown to 5 days from now
+var countDownDate = new Date("Oct 13, 2024 00:00:00").getTime();
 
-    <script>
-       const seconds = document.querySelector(".seconds .number"),
-  minutes = document.querySelector(".minutes .number"),
-  hours = document.querySelector(".hours .number"),
-  days = document.querySelector(".days .number");
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-// Calculate the date 5 days from now
-const countDownDate = new Date(new Date().getTime() + (5 * 24 * 60 * 60 * 1000)).getTime();
+  // Get current time
+  var now = new Date().getTime();
 
-const timeFunction = setInterval(() => {
-  const now = new Date().getTime();
-  const distance = countDownDate - now;
+  // Find the distance between now and the countdown date
+  var distance = countDownDate - now;
 
-  // Calculate time components
-  const dayValue = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hourValue = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minValue = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const secValue = Math.floor((distance % (1000 * 60)) / 1000);
+  // Time calculations for days, hours, minutes, and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Update the displayed values
-  seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
-  minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
-  hours.textContent = hourValue < 10 ? `0${hourValue}` : hourValue;
-  days.textContent = dayValue < 10 ? `0${dayValue}` : dayValue;
+  // Display the result in the element with id="countdown-timer"
+  document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " +
+  minutes + "m " + seconds + "s ";
 
-  // If the countdown is over, stop the timer
+  // If the countdown is over, display some message
   if (distance < 0) {
-    clearInterval(timeFunction);
-    days.textContent = "00";
-    hours.textContent = "00";
-    minutes.textContent = "00";
-    seconds.textContent = "00";
+    clearInterval(x);
+    document.getElementById("countdown-timer").innerHTML = "We have launched!";
   }
-}, 1000); // 1000ms = 1s
+}, 1000);
+</script>
 
-    </script>
 
 </body>
 </html>
