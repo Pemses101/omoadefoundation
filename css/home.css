@@ -76,16 +76,7 @@ body {
 }
 
 
-html::-webkit-scrollbar{
-  width: 0.5rem;
-}
-html::-webkit-scrollbar-thumb{
-  background: transparent;
-}
-html::-webkit-scrollbar-track{
-background: white;
-border-radius: 5rem;
-}
+
 
 .contain{
   height:100vh;
