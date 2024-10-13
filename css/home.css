@@ -978,6 +978,56 @@ svg{
   border-radius: 5px;
   object-fit: cover;
 }
+.container6{
+  display: flex;
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  gap: 1px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card4{
+  height: 440px;
+  width: 220px;
+  margin: 20px;
+  box-shadow: 0 3px 5px white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+.card4 .bg-image img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 45% 100%, 0 70%);
+}
+
+.card4 .pic img{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 10px solid gray;
+  margin-top: -90px;
+   position: relative;
+}
+
+.card4 .info h3{
+  color: white;
+  font-size: 20px;
+  padding: 10px 0;
+}
+.card4 .info p{
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+}
+.card4 .info .icons a{
+  font-size: 20px;
+  text-decoration: none;
+   color: white;
+   margin-top: 20px;
+  padding: 0 5px;
+}
 
 
 footer{
