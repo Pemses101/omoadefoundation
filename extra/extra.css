@@ -1,0 +1,33 @@
+/* 
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ */
+
+body {
+  background:   linear-gradient(rgba(5, 156, 143, 0.5), rgb(3, 53, 74));  
+  color: white;
+  /* line-height: 1.5;
+  font-size: 0.875rem;
+  min-height: 70vh;
+ background-size: cover;
+ overflow-x: hidden; */
+}
+
+strong{
+    color: rgb(2, 27, 41);
+}
