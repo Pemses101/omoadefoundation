@@ -638,6 +638,7 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   /* padding: 1em 0; */
+  display:none;
 }
 .outer{
   width: 160px;
