@@ -1065,14 +1065,16 @@ svg{
    z-index: 100;
  }
  .container4 .pop-image span{
-   position: absolute;
-   top: 0;
-   right: 0;
+  position: absolute;
+  top: 80px;
+  bottom:  0;
+  height: 15rem;
+  transform: translateX(50%, 50%);
    font-size: 40px;
    font-weight: bolder;
    color: white;
    cursor: pointer;
-   object-fit: contain;
+ 
  }
  .container4 .pop-image img{
    position: absolute;
