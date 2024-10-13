@@ -1,18 +1,14 @@
-const number = document.getElementById("number2");
-let counter = 0;
-
-initApp();
-
-function initApp(){
-    setInterval(() => {
-        if (counter === 65) {
-            clearInterval();
-            return;
+document.querySelectorAll(".photo-gallery img").forEach(image => {
+   
+        image.onclick = () =>{
+            document.querySelector('.pop-image').style.display = 'block';
+            document.querySelector(".pop-image img").src = image.getAttribute('src');
         }
-        counter++;
-    number2.innerText = counter + "%";
-    },  1500/20)      
-    
+    });
+
+document.querySelector(".pop-image span").onclick = () =>{
+    document.querySelector('.pop-image').style.display = 'none';
+
 }
 
 
