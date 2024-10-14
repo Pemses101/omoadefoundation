@@ -339,6 +339,37 @@ nav {
   }
   
 
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background: rgb(0, 50, 70);
+    border-radius: 1rem;
+    min-width: 160px;
+    transition: 3s;
+    z-index: 1;
+    font-size: 2rem;
+  }
+
+
+  .dropdown-content1 a {
+    float: none;
+    color: white;
+    padding: 9px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+
+  }
+
+  .dropdown-content1 a:hover {
+    background-color: rgb(115, 98, 239);
+  }
+  
+
+  .dropdown:hover .dropdown-content1 {
+    display: block;
+  }
+
 
   .dropdown-content {
        display: none;
