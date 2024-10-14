@@ -341,14 +341,17 @@ nav {
 
 
   .dropdown-content {
-    display: none;
-    position: absolute;
     background: rgb(0, 50, 70);
     border-radius: 1rem;
     min-width: 160px;
     transition: 3s;
     z-index: 1;
     font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    bottom:  0;
+    height: 15rem;
+    transform: translateX(50%, 50%);
   }
   
 
