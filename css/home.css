@@ -342,19 +342,21 @@ nav {
   .dropdown-content {
     display: none;
     position: absolute;
+    top: 0;
     background: rgb(0, 50, 70);
     border-radius: 1rem;
     min-width: 160px;
     transition: 3s;
     z-index: 1;
     font-size: 2rem;
+    
   }
   
 
   .dropdown-content a {
     float: none;
     color: white;
-    padding: 12px 16px;
+    padding: 9px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -368,7 +370,37 @@ nav {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  @media screen and (max-width: 800px) {
+
+
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background: rgb(0, 50, 70);
+    border-radius: 1rem;
+    min-width: 160px;
+    transition: 3s;
+    z-index: 1;
+    font-size: 2rem;
+  }
+  
+
+  .dropdown-content1 a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content1 a:hover {
+    background-color: rgb(115, 98, 239);
+  }
+  
+
+  .dropdown:hover .dropdown-content1 {
+    display: block;
+  }  @media screen and (max-width: 800px) {
     .dropdown {
       float: none;
     }
