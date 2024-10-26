@@ -419,7 +419,142 @@ nav {
       width: unset;
     }
   }
-   section#hero{
+  
+.container11{
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+.header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.header .container11{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .menu .dropdown{
+  position: relative;
+}
+
+
+.header .menu a{
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+}
+
+.header .menu .sub-menu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100px;
+  background-color: transparent;
+  z-index: 1;
+  transform-origin: top;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+}
+.header .menu li:hover > .sub-menu{
+ opacity: 1;
+ transform: none;
+ visibility: visible;
+ transition: all 0.5s ease;
+}
+
+
+
+
+
+
+.header .menu i{
+  font-size: 10px;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  color: white;
+  top: calc(50%, -5px);
+}
+.header .menu .sub-menu i{
+  transform: rotate(-90deg);
+  right: 24px;
+}
+@media(max-width:991px){
+  .header .menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background-color: transparent;
+    padding: 15px 30px 30px;
+    overflow: auto;
+    z-index: 1;
+    
+     
+  }
+  html::-webkit-scrollbar{
+    width: 0.5rem;
+  }
+  html::-webkit-scrollbar-thumb{
+    background: transparent;
+  }
+  html::-webkit-scrollbar-track{
+  background: white;
+  border-radius: 5rem;
+  }
+
+  .header .menu > ul > li{
+    display: block;
+  }
+  
+
+
+  .header .menu i{
+    height: 34px;
+    width: 34px;
+    border: 1px solid olive;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    cursor: pointer;
+    top: 7px;
+  }
+  .header .menu .sub-menu{
+    position: static;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    padding: 0;
+    transform: none;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+  }
+  .header .menu .sub-menu li:last-child{
+    border: none;
+  }
+
+ 
+  .header .menu .dropdown.active > i{
+    background-color: gainsboro;
+     transform: rotate(180deg);
+  }
+  .header .menu .dropdown.active > .sub-menu{
+    display: block;
+
+  }
+}
+
+section#hero{
        height:calc(100vh - 60px);
        display: flex;
        flex-direction: column;
