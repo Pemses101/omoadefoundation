@@ -262,8 +262,8 @@ nav {
   }
 }
   .action_btn{
-    background-color: whitesmoke;
-    color:  rgb(6, 105, 122);
+    background-color:  rgb(2, 78, 78);
+    color:  white;
     padding: 0.7rem 1.2rem;
     border: none;
     outline: none;
@@ -274,7 +274,8 @@ nav {
   }
   .action_btn:hover{
     scale: 1.05;
-    background-color: rgb(185, 251, 251);
+    background-color: rgb(2, 51, 51);
+    
   }
   .action_btn:active{
     scale: 0.95;
@@ -554,7 +555,8 @@ nav {
   }
 }
 
-section#hero{
+
+   section#hero{
        height:calc(100vh - 60px);
        display: flex;
        flex-direction: column;
@@ -817,8 +819,7 @@ section#hero{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* padding: 1em 0; */
-}
+ }
 @media screen and (max-width: 880px) {
   .wrapper1{
    display: none;
@@ -934,7 +935,6 @@ svg{
 
 .container3{
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   place-items: center;
   margin-inline: 1.5rem;
   padding-block: 5rem;
@@ -1164,8 +1164,6 @@ svg{
 }
 .container6{
   display: flex;
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr); */
   gap: 1px;
   justify-content: center;
   flex-wrap: wrap;
@@ -1378,6 +1376,4 @@ footer .install img{
   .hide-preloader {
     visibility: hidden;
   }
-  
-  
   
