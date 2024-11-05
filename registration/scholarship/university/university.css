@@ -11,8 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:   linear-gradient(rgba(5, 156, 143, 0.5), rgb(3, 53, 74)),   
-    url(../../../pictures/pexels-pixabay-256490.jpg) center/cover no-repeat;
+     background:   linear-gradient(rgba(5, 156, 143, 0.5), rgb(3, 53, 74));  
     background-size: cover;
     background-position: center;
 }
